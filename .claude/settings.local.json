@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(FOREMAN_URL=\"https://test.example.com\" USERNAME=\"admin\" PASSWORD=\"secret\" bash -c:*)",
+      "Bash(FOREMAN_URL=\"https://test.example.com\" FOREMAN_USERNAME=\"admin\" FOREMAN_PASSWORD=\"secret\" bash:*)",
+      "Bash(SATELLITE_URL=\"https://test.example.com\" SATELLITE_USERNAME=\"admin\" SATELLITE_PASSWORD=\"secret\" bash -c 'source setup_complete_workflow.sh --help | head -5')",
+      "Bash(env -i bash -c 'export SATELLITE_USERNAME=\"\"admin\"\" SATELLITE_PASSWORD=\"\"secret\"\" FOREMAN_URL=\"\"https://test.example.com\"\"; source setup_complete_workflow.sh --help | head -3')",
+      "Bash(env:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
